@@ -1,0 +1,16 @@
+.images{
+    height: 350px;
+    width: 350px;
+    display: flexbox;
+    border-style: solid;
+    border-width: 10px;
+}
+
+#image1{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#image2{
+    margin-right: 5%;
+}
