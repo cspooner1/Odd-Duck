@@ -189,4 +189,7 @@ function endResults() {
         }
       }
       });
+      const myJSON = JSON.stringify(products);
+window.localStorage.setItem("products", myJSON)
+console.log("Local Storage", localStorage )
 }
