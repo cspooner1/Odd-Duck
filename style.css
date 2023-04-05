@@ -14,3 +14,11 @@
 #image2{
     margin-right: 5%;
 }
+
+h1 {
+    font-size: 50px;
+}
+
+* {
+    background-color: darkgray;
+}

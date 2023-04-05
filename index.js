@@ -1,11 +1,11 @@
-var numberOfVotes = 0;
-
 function Product(productName, imageFilePath) {
     this.productName = productName;
     this.imageFilePath = imageFilePath;
     this.timesShown = 0;
     this.clicks = 0;
 }
+var numberOfVotes = 0;
+
 let bubbleGum = new Product("Bubble Gum", "./Images/bubblegum.jpg");
 let bag = new Product("Bag", "./Images/bag.jpg");
 let chair = new Product("Chair", "./Images/chair.jpg");
@@ -59,7 +59,7 @@ function getRandomProducts(arrayOfProducts) {
     while (randomIndex1 === randomIndex3){
         randomIndex3 = Math.floor(Math.random() * arrayOfProducts.length)
     }
- let randomProduct1 = arrayOfProducts[randomIndex1]
+    let randomProduct1 = arrayOfProducts[randomIndex1]
     let randomProduct2 = arrayOfProducts[randomIndex2]
     let randomProduct3 = arrayOfProducts[randomIndex3] 
     randomProducts.push(randomProduct1)
@@ -88,7 +88,7 @@ function displayProduct(product, imageTagId) {
     let productImageFilePath = product.imageFilePath
     let image = document.getElementById(imageTagId)
     image.src = productImageFilePath
-    product.timesShown++;
+    product.timesShown++;  
 }
 
 displayProduct(randomProducts[0], "image1")
@@ -96,7 +96,6 @@ displayProduct(randomProducts[1], "image2")
 displayProduct(randomProducts[2], "image3")
 
 let image1HTMLtag = document.getElementById("image1")
-
 image1HTMLtag.addEventListener("click", function amountClicked() {
     console.log("You clicked image1")
     //change image1
@@ -173,11 +172,15 @@ function endResults() {
           datasets: [{
             label: '# of Votes',
             data: [products[0].clicks, products[1].clicks, products[2].clicks, products[3].clicks, products[4].clicks,products[5].clicks, products[6].clicks, products[7].clicks, products[8].clicks, products[9].clicks, products[10].clicks, products[11].clicks, products[12].clicks, products[13].clicks, products[14].clicks, products[15].clicks, products[16].clicks, products[17].clicks, products[18].clicks, ],
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: ['#800000'],
+            borderColor: ['#000000']
           }, {
               label: '# of Times Shown',
             data:[products[0].timesShown, products[1].timesShown, products[2].timesShown, products[3].timesShown, products[4].timesShown, products[5].timesShown, products[6].timesShown, products[7].timesShown, products[8].timesShown, products[9].timesShown, products[10].timesShown, products[11].timesShown, products[12].timesShown, products[13].timesShown, products[14].timesShown, products[15].timesShown, products[16].timesShown, products[17].timesShown, products[18].timesShown, ],
-            borderWidth: 1
+            borderWidth: 1,
+            backgroundColor: ['#4b0082'],
+            borderColor: ['#000000']
           }]
       },
       options: {
